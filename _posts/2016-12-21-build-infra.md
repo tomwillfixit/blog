@@ -3,7 +3,7 @@ layout: post
 title: Build and Test Infrastructure (Part 1)
 ---
 
-![factory](../images/factory.jpg)
+![factory](images/factory.jpg)
 
 This the first of three blog posts which will look at Build Infrastructure, Test Infrastructure and the benefits of separating the two.
 
