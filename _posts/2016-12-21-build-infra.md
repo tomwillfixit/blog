@@ -37,7 +37,7 @@ These components satisfy the what, how and where of the build process. BI can be
 
 ## Build Infrastructure characteristics
 
-Some of the key characteristics of BI are reproducibility, availability, visibility, predictable and portability.  
+Some of the key characteristics of BI : 
 
  * Reproducibility
 
@@ -51,7 +51,7 @@ The source control repository is critical. This may sound obvious but from past 
 
 There should be no black boxes, hacks or workarounds within BI.  The structure, status and origin of BI should be available to every user.  Each user should have the ability to trace their build from source through the build process to the artifacts destination. 
 
- * Predictable
+ * Predictability
 
 This is a combination of reproducibility and availability.  The user should recieve a predictable and consistent experience during the build process regardless of when a build is running or where the build runs.  This is particularly challenging if builds rely on 3rd party tooling and libraries which may change upstream.  
 
@@ -68,7 +68,7 @@ Using tools such as Docker and Ansible the entire BI should be portable.  This p
 
 Build functions previously performed using CI/CD services such as Bamboo and Jenkins are being integrated into source control systems. Gitlab and Bitbucket are offering built-in CI/CD functions.  Github is likely to follow.  
 
-What will this mean for tooling such as Bamboo and Jenkins?  Bamboo will likely be replaced by Bitbucket Pipelines in the coming years.  Jenkins, which many treat as an automation engine, as well as a CI server will continue to evolve.  Work being done by Cloudbees, in particular BlueOcean, will make the Jenkins UX beautiful and a joy to use.  Hosted CI/CD solutions such as CodeShip, CircleCI, Travis and Drone will continue to thrive and reduce the cost of building.  
+What will this mean for tooling such as Bamboo and Jenkins?  Bamboo will likely be replaced by Bitbucket Pipelines in the coming years.  Jenkins, which many treat as an automation engine, as well as a CI server will continue to evolve.  Work being done by Cloudbees, in particular BlueOcean, will make the Jenkins UX beautiful and a joy to use.  Pipeline Editor in BlueOcean looks awesome.  Hosted CI/CD solutions such as CodeShip, CircleCI, Travis and Drone will continue to thrive and reduce the cost of building.  
 
 # Summary
 
