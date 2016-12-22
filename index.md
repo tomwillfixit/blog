@@ -2,7 +2,7 @@
 layout: default
 title: Blog
 ---
-![banner](../images/twfi.jpg)
+![banner](images/twfi.jpg)
 
 <div class="posts">
   {% for post in site.posts %}
