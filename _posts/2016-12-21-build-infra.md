@@ -11,6 +11,14 @@ title: Build and Test Infrastructure (Part 1)
 
 This the first of three blog posts which will look at Build Infrastructure, Test Infrastructure and the benefits of separating the two.
 
+## Background
+
+As a Build Engineer at Demownare I've spent the past 4 years confusing BI with Test Infrastructure(TI) and this is an attempt to clarify the characteristics/differences between BI and TI.  I've spent alot of time building immutable and portable general purpose environments to satisfy both the build and test functions.  This has served us well in the past but will hinder our ability to scale in the coming years.
+
+tl;dr BI and TI share characteristics but the investment, ownership, risk, lifecycle, elasticity and complexity differ greatly.
+
+> “We have so much time and so little to do. Strike that, reverse it.”
+
 ## What is Build Infrastructure?
 
 Build Infrastructure (BI) consists of the tooling, services and environments required to create a deployable artifact from source.
@@ -26,12 +34,6 @@ The core components of BI are :
 A "service" or "application" can be built and deployed using the core components listed above.  The CI server has intentionally been ommited.  While the CI server is the preferred path for builds to take, we should still be able to build and deploy a service without the CI server in the case of an outage.
 
 These components satisfy the what, how and where of the build process. BI can be thought of as a factory.  The raw material is code. The machinery is the build process and the created artifact is the product.  What about Quality Control?  BI is not responsible for the quality of the artifacts being built. Garbage in, garbage out.  The raw material should be checked before reaching the factory and all products should be tested before reaching the customer.
-
-## Timeout - Why are you blogging about this?
-
-I've spent the past 4 years confusing BI with Test Infrastructure(TI) and this is an attempt to clarify the characteristics and differences between BI and TI.  We spent alot of time building general purpose environments to satisfy both the build and test functions.  This has served us well in the past but will hinder our ability to scale in the coming years.
-
-tl;dr BI and TI share characteristics but the investment, ownership, risk, lifecycle, elasticity and complexity differ greatly.
 
 ## Build Infrastructure characteristics
 
@@ -59,6 +61,8 @@ Developer : "Where are the builds running?"  Build Engineer : "No idea"
 
 Using tools such as Docker and Ansible the entire BI should be portable.  This portability should be exercised as regularly as checking the integrity of backups.  Change is the only constant after all.  Using pipelines to deploy services nightly and to test build environments helps to protect from code rot.
 
+
+> “But Charlie, don’t forget what happened to the man who suddenly got everything he always wanted… He lived happily ever after.”
 
 ## Sidenote - Change is coming
 
