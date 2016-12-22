@@ -1,5 +1,6 @@
 ---
 layout: page
+name: About 
 permalink: /about/
 ---
 
@@ -17,3 +18,4 @@ Previous blog can be found [here](https://thshaw.blogspot.ie/)
 
 The artwork above was created by [Shellz-Art](http://shellz-art.com/)
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/eUbdnDXGpbo?rel=0" frameborder="0" allowfullscreen></iframe>
