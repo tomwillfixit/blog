@@ -9,11 +9,14 @@ title: Build and Test Infrastructure (Part 1)
 
 ― Roald Dahl, Charlie and the Chocolate Factory
 
+<p style='text-align: justify;'>
 This the first of three blog posts which will look at Build Infrastructure, Test Infrastructure and the benefits of separating the two.
+</p>
 
 ## Background
-
+<p style='text-align: justify;'>
 As a Build Engineer at Demonware I've spent the past 4 years confusing Build Infrastructure (BI) with Test Infrastructure (TI) and this is an attempt to clarify the characteristics/differences between BI and TI.  I've spent alot of time building immutable and portable general purpose environments to satisfy both the build and test functions.  This has served us well in the past but will hinder our ability to scale in the coming years.
+</p>
 
 tl;dr BI and TI share characteristics but the investment, ownership, risk, lifecycle, elasticity and complexity differ greatly.
 
