@@ -1,6 +1,5 @@
 ---
 layout: page
-title: About Tom
 permalink: /about/
 ---
 
@@ -14,6 +13,7 @@ The comments and opinions expressed in this blog are my own.  I like to blog pri
 
 Previous blog can be found [here](https://thshaw.blogspot.ie/)
 
-### Contact me
+### Credit 
 
-[tom@tomwillfixit.com](mailto:tom@tomwillfixit.com)
+The artwork above was created by [Shellz-Art](http://shellz-art.com/)
+
