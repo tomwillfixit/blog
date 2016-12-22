@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![banner](images/twfi.jpg){:class="img-responsive"}
+
 Some information about you!
 
 ### More Information
