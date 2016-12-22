@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![banner](/images/twfi.jpg)
+![banner](blog/images/twfi.jpg)
 
 Some information about you!
 
