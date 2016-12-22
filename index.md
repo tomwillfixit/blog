@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 ---
+
 ![banner](images/twfi.jpg)
 
 <div class="posts">
