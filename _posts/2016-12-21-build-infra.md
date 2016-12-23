@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Build and Test Infrastructure (Part 1)
 ---
 
