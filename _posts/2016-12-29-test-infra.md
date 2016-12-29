@@ -9,7 +9,6 @@ title: Build and Test Infrastructure (Part 2)
 
 ― Tom DeMarco (1987) Peopleware: Productive Projects and Teams. 
 
----
 
 ![scale](../images/scale.jpg)
 
@@ -78,13 +77,11 @@ Modifying build environments to support testing is problematic for two reasons :
 
   As the build and test environments become more resource hungry the ability to run them locally becomes more challenging.
 
----
 
 > “We cannot solve our problems with the same thinking we used when we created them.”
 
 — Albert Einstein
 
----
 
 ## Build environments (BE) vs Test environments (TE)
 
@@ -143,13 +140,11 @@ I've come across these 3 scenarios in the past and while no-one died it was quit
 
 A change in how and where tests are being run will require investment from each team.  Many testsuites are written to run on single environments and may require development time to allow them to run in a distributed manner.
 
----
 
 > “I remember the days when QA testers were treated almost as second-class citizens and developers ruled the software world. But as it recently occurred to me: we’re all testers now.” 
 
 — Joe Colantonio
 
----
 
 # Summary
 
