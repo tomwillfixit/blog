@@ -34,7 +34,7 @@ Defining the CI/CD configuration in code alongside service source code is common
 
 Test Infrastructure as code and test resource requirements should also be located alongside the service code.  
 
-## Benefits of Test Instructure as code
+## Benefits of Test Infrastructure as code
 
 - Reduces drift between local testing environments and those used as part of CI/CD
 - Better visibility into how test environments are configured
