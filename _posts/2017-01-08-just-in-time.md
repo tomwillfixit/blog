@@ -26,9 +26,9 @@ JIT is a set of principles pioneered by Toyota in the 1950s aimed primarily at r
 - Simpification
 - Respect for People
 
-What does this have to do with Test Infrastructure?  With the rise of DevOps the adoption of JIT principles is set for a resurgence.  Developers are increasingly owning entire production systems and the next generation of tooling is encouraging JIT and lean methodologies.
+What does this have to do with Test Infrastructure?  With the rise of DevOps, the adoption of JIT principles is set for a resurgence.  Developers are increasingly owning entire production systems and the next generation of tooling is encouraging JIT and lean methodologies.
 
-The container revolution and tooling such as Docker enables developers to build, test and deploy entire production systems.  As part of this production system developers are increasingly owning the testfunction and related infrastructure.
+The container revolution and tooling such as Docker enables developers to build, test and deploy entire production systems.  As part of this production system developers are increasingly owning the test function and related infrastructure.
 
 Defining the CI/CD configuration in code alongside service source code is common practice.  Travis, Jenkins, CodeShip all support this.  This improves visibility into what is being performed as part of a build, test and deploy process.  
 
