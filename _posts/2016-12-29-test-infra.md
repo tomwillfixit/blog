@@ -4,6 +4,7 @@ comments: true
 title: Build and Test Infrastructure (Part 2)
 ---
 
+---
 > “Quality is free, but only to those who are willing to pay heavily for it.”
 
 ― Tom DeMarco (1987) Peopleware: Productive Projects and Teams. 
@@ -13,7 +14,7 @@ title: Build and Test Infrastructure (Part 2)
 
 This is the second of two blog posts looking at Build Infrastructure (BI), Test Infrastructure (TI) and the benefits of separating the two.
 
-This post contains opinions which are my own and based upon past experiences of managing Test Infrastructure.
+**Disclaimer** : This post contains opinions which are my own and based upon past experiences of managing Test Infrastructure.
 
 > “Testing is an infinite process of comparing the invisible to the ambiguous in order to avoid the unthinkable happening to the anonymous.”
 
@@ -25,13 +26,20 @@ Test Infrastructure consists of the tooling, services and environments required 
 
 The core components of TI are : 
 
-* Artifact repository/registry 
+* **Artifact repository/registry** 
 
-* Test environment
+  Hosts artifacts created as part of the build process.
 
-* Testsuite
+* **Test environment**
 
-The Artifact repository/registry hosts artifacts created as part of the build process.  The "Test environment" contains the tooling, services and/or hooks to external services required for tests to be executed.  The "Testsuite" contains the code used to verify the product requirements.  These core components are a simplification of the what, where and how of the test function.
+  Contains the tooling, services and/or hooks to external services required for tests to be executed.
+
+* **Testsuite**
+
+  Contains the code used to verify the product requirements.
+
+
+These core components are a simplification of the what, where and how of the test function.
 
 A comprehensive TI consists of many other supporting services such as a test scheduler, environment orchestration, centralised logging, metrics gathering and reporting. 
 
@@ -61,17 +69,19 @@ TE and arguably the testsuites, should be designed to be scalable and runnable a
 
 Modifying build environments to support testing is problematic for two reasons :
 
-* Glass ceiling of resources
+* **Glass ceiling of resources**
 
   When do we stop adding more resources? As we increase the resources per environment the cost of build and test increases.
 
-* Reproducing environments locally becomes more difficult
+* **Reproducing environments locally becomes more difficult**
 
   As the build and test environments become more resource hungry the ability to run them locally becomes more challenging.
+
 
 > “We cannot solve our problems with the same thinking we used when we created them.”
 
 — Albert Einstein
+
 
 ## Build environments (BE) vs Test environments (TE)
 
@@ -88,7 +98,7 @@ This next point is purely anecdotal.  A misconfiguration in the BE is alot more 
 
 Separate the ownership of Build Infrastructure and Test Infrastructure.  
 
-BI should be as simple as possible while TI should be designed with elasticity and replicating real world scenarios in mind.  Tools such as Docker Swarm can help empower the end user. Developers can use Docker Swarm to create ad-hoc test clusters while the QA team can use Docker Swarm to create more permanent shared test clusters. Some more details of this can be found [here](http://www.slideshare.net/ThomasShaw5/containerised-testing-at-demonware-pycon-ireland-2016).
+BI should be as simple as possible while TI should be designed with elasticity and production parity in mind.  Tools such as Docker Swarm can help with the orchestration of such environments. Developers can use Docker Swarm to create ad-hoc test clusters while the QA team can use Docker Swarm to create more permanent shared test clusters. Some more details of this can be found [here](http://www.slideshare.net/ThomasShaw5/containerised-testing-at-demonware-pycon-ireland-2016).
 
 
 ## Challenges 
@@ -134,6 +144,7 @@ A change in how and where tests are being run will require investment from each 
 > “I remember the days when QA testers were treated almost as second-class citizens and developers ruled the software world. But as it recently occurred to me: we’re all testers now.” 
 
 — Joe Colantonio
+
 
 # Summary
 
