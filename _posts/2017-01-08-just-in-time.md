@@ -41,7 +41,7 @@ Test Infrastructure as code and test resource requirements should also be locate
 - Encourages better understanding of what resources are needed per test/testsuite.
 - Environments are customised to the test requirements*
 
-* In the past I've worked on projects in which a default test environment was used for convenience or we simply "super-sized" the test environment to ensure tests ran consistently. This may seem reasonable when you are running a handful of tests but as you scale your testing then this becomes a real issue.  Resource utilization drops through the floor and costs per test cycle increase.
+\* In the past I've worked on projects in which a default test environment was used for convenience or we simply "super-sized" the test environment to ensure tests ran consistently. This may seem reasonable when you are running a handful of tests but as you scale your testing then this becomes a real issue.  Resource utilization drops through the floor and costs per test cycle increase.
 
 ## JIT Test Infrastructure
 
