@@ -23,7 +23,7 @@ JIT is a set of principles pioneered by Toyota in the 1950s aimed primarily at r
 
 - Elimination of Waste
 - Quality at the source
-- Simpification
+- Simplification
 - Respect for People
 
 What does this have to do with Test Infrastructure?  With the rise of DevOps, the adoption of JIT principles is set for a resurgence.  Developers are increasingly owning entire production systems and the next generation of tooling is encouraging JIT and lean methodologies.
