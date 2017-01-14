@@ -4,6 +4,10 @@ comments: true
 title: releaseCon17 
 ---
 
+> “If you build it, they will come”
+
+― K Costner 
+
 ![releaseCon](../images/indy.jpg)
 
 ## What is releaseCon ?
