@@ -10,7 +10,7 @@ title: releaseCon17
 
 releaseCon is a community event for engineers involved in the building and deployment of software. The name is subject to change. 
 
-## Why do we need another conference ?
+## Do we really need another conference ?
 
 The fields of Release Management and Build Engineering are becoming increasingly popular as organizations strive to reduce the time taken to deliver new features.  While many conferences may touch on topics such as Continuous Integration, Continuous Delivery and Release Management we will make these topics our focus. 
 
@@ -24,11 +24,11 @@ We will be hosting the conference in Dublin, Ireland.
 
 ## Who are the organisers ?
 
-releaseCon is being organised primarily by engineers working within the games industry.  
+releaseCon is being organised primarily by engineers working within the games industry.  We are passionate about games and continuously delivering great gaming experiences to our customers.  Continuous Enjoyment.
 
 ## Why are you doing this ?
 
-We would like to share our experiences of Release and Build Engineering with other engineers in different industries and learn about how they are evolving to deliver better quality software more regularly.
+We would like to share our experiences of Release and Build Engineering with other engineers in different industries and learn about how they are evolving to deliver better quality software more regularly. 
 
 ## Talks
 
@@ -40,4 +40,4 @@ We have confirmed the sponsorship of Demonware (Activision) and Digit Gaming.  W
 
 ## Contact
 
-This conference is in the very early stages (1 week old) and we could use plenty of help to get this up and running.  If you would like to be involved, talk, sponsor or just provide moral support then feel free to contact @tomwillfixit on Twitter or email : releasecon@tomwillfixit.com
+This conference is in the very early stages (1 week old) and we could use plenty of help to get this up and running.  If you would like to be involved, suggest a talk, sponsor or just provide moral support then feel free to contact @tomwillfixit on Twitter or email : releasecon@tomwillfixit.com
