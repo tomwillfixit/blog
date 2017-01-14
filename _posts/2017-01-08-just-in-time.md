@@ -23,25 +23,25 @@ JIT is a set of principles pioneered by Toyota in the 1950s aimed primarily at r
 
 - Elimination of Waste
 - Quality at the source
-- Simpification
+- Simplification
 - Respect for People
 
-What does this have to do with Test Infrastructure?  With the rise of DevOps the adoption of JIT principles is set for a resurgence.  Developers are increasingly owning entire production systems and the next generation of tooling is encouraging JIT and lean methodologies.
+What does this have to do with Test Infrastructure?  With the rise of DevOps, the adoption of JIT principles is set for a resurgence.  Developers are increasingly owning entire production systems and the next generation of tooling is encouraging JIT and lean methodologies.
 
-The container revolution and tooling such as Docker enables developers to build, test and deploy entire production systems.  As part of this production system developers are increasingly owning the testfunction and related infrastructure.
+The container revolution and tooling such as Docker enables developers to build, test and deploy entire production systems.  As part of this production system developers are increasingly owning the test function and related infrastructure.
 
 Defining the CI/CD configuration in code alongside service source code is common practice.  Travis, Jenkins, CodeShip all support this.  This improves visibility into what is being performed as part of a build, test and deploy process.  
 
 Test Infrastructure as code and test resource requirements should also be located alongside the service code.  
 
-## Benefits of Test Instructure as code
+## Benefits of Test Infrastructure as code
 
 - Reduces drift between local testing environments and those used as part of CI/CD
 - Better visibility into how test environments are configured
 - Encourages better understanding of what resources are needed per test/testsuite.
 - Environments are customised to the test requirements*
 
-* In the past I've worked on projects in which a default test environment was used for convenience or we simply "super-sized" the test environment to ensure tests ran consistently. This may seem reasonable when you are running a handful of tests but as you scale your testing then this becomes a real issue.  Resource utilization drops through the floor and costs per test cycle increase.
+\* In the past I've worked on projects in which a default test environment was used for convenience or we simply "super-sized" the test environment to ensure tests ran consistently. This may seem reasonable when you are running a handful of tests but as you scale your testing then this becomes a real issue.  Resource utilization drops through the floor and costs per test cycle increase.
 
 ## JIT Test Infrastructure
 
