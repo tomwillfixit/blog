@@ -1,34 +1,34 @@
 ---
 layout: post
 comments: true
-title: releaseCon17 
+title: shipitCon17 
 ---
 
 > “If you build it, they will come”
 
 ― K Costner 
 
-![releaseCon](../images/indy.jpg)
+![shipitCon](../images/ralph.gif)
 
-## What is releaseCon ?
+## What is shipitCon ?
 
-releaseCon is a community event for engineers involved in the building and deployment of software. The name is subject to change. 
+shipitCon is a community event for engineers involved in the building and deployment of software. The name is subject to change. 
 
 ## Do we really need another conference ?
 
 The fields of Release Management and Build Engineering are becoming increasingly popular as organizations strive to reduce the time taken to deliver new features.  While many conferences may touch on topics such as Continuous Integration, Continuous Delivery and Release Management we will make these topics our focus. 
 
-## When is releaseCon ?
+## When is shipitCon ?
 
 We are planning to host the conference at the end of August 2017.  We are working on confirming a venue and specific date.
 
-## Where is releaseCon ?
+## Where is shipitCon ?
 
 We will be hosting the conference in Dublin, Ireland.
 
 ## Who are the organisers ?
 
-releaseCon is being organised primarily by engineers working within the games industry.  We are passionate about games and continuously delivering great gaming experiences to our customers.  Continuous Enjoyment.
+shipitCon is being organised primarily by engineers working within the games industry.  We are passionate about games and continuously delivering great gaming experiences to our customers.  Continuous Enjoyment.
 
 ## Why are you doing this ?
 
