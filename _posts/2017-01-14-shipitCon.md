@@ -1,34 +1,34 @@
 ---
 layout: post
 comments: true
-title: shipitCon17 
+title: ShipitCon17 
 ---
 
 > “If you build it, they will come”
 
 ― K Costner 
 
-![shipitCon](../images/ralph.gif)
+![ShipitCon](../images/ralph.gif)
 
-## What is shipitCon ?
+## What is ShipitCon ?
 
-shipitCon is a community event for engineers involved in the building and deployment of software. The name is subject to change. 
+ShipitCon is a community event for engineers involved in the building and deployment of software.
 
 ## Do we really need another conference ?
 
 The fields of Release Management and Build Engineering are becoming increasingly popular as organizations strive to reduce the time taken to deliver new features.  While many conferences may touch on topics such as Continuous Integration, Continuous Delivery and Release Management we will make these topics our focus. 
 
-## When is shipitCon ?
+## When is ShipitCon ?
 
 We are planning to host the conference at the end of August 2017.  We are working on confirming a venue and specific date.
 
-## Where is shipitCon ?
+## Where is ShipitCon ?
 
 We will be hosting the conference in Dublin, Ireland.
 
 ## Who are the organisers ?
 
-shipitCon is being organised primarily by engineers working within the games industry.  We are passionate about games and continuously delivering great gaming experiences to our customers.  Continuous Enjoyment.
+ShipitCon is being organised primarily by engineers working within the games industry.  We are passionate about games and continuously delivering great gaming experiences to our customers.  We want to deliver Continuous Enjoyment.
 
 ## Why are you doing this ?
 
@@ -44,4 +44,4 @@ We have confirmed the sponsorship of Demonware (Activision) and Digit Gaming.  W
 
 ## Contact
 
-This conference is in the very early stages (1 week old) and we could use plenty of help to get this up and running.  If you would like to be involved, suggest a talk, sponsor or just provide moral support then feel free to contact @tomwillfixit on Twitter or email : releasecon@tomwillfixit.com
+This conference is in the very early stages (1 week old) and we could use plenty of help to get this up and running.  If you would like to be involved, suggest a talk, sponsor or just provide moral support then feel free to follow us @shipitcon on Twitter.  We will have our website live in the next few weeks.
