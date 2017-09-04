@@ -100,16 +100,19 @@ Why does Rexray need to query the metadata service?  Is something being returned
 ```
 git clone https://github.com/bpholt/fake-ec2-metadata-service
 ifconfig lo:0 169.254.169.254 netmask 255.255.255.255 up
+```
 
 We need to edit ec2-metadata-service.rb and mock out a few endpoints to keep the rexray/efs plugin happy.
 
 The edited file can be found [here](ec2-metadata-service.rb)
 
 When you have ensured that the instanceID endpoint is correct then you can go ahead and build the image locally.
+```
 docker build -t fake-ec2-metadata-service .
+```
 Edit the docker-compose.yml and replace the image name and change port 8169 to 80
-Run : docker-compose up -d
-
+```
+docker-compose up -d
 ```
 
 At this point you have a fake metadata service running.
@@ -121,8 +124,7 @@ docker plugin install rexray/efs EFS_ACCESSKEY=AKA EFS_SECRETKEY=bK EFS_SECURITY
 
 ```
 
-The plugin will query the fake metadata service and check that the instanceID exists.  I just used a preexisting t2.micro instanceID to get around this.
-The plugin was installed successfully.
+The plugin will query the fake metadata service and check that the instanceID exists.  I just used a pre-existing t2.micro instanceID to get around this.  The plugin was installed successfully.
 
 Test that it works.  
 
@@ -140,6 +142,6 @@ docker run -v test-vol-1:/data busybox mount | grep "/data"
 
 # Summary
 
-Plugins are awesome. Give them a try.  I really like EFS but I like optionality.  Having the option of running containers on hosts outside of EC2 is important. It's worth noting this is just a dirty great workaround and will likely be out of date by the time this is commited.
+Plugins are awesome. Give them a try.  I really like EFS but I like optionality more.  Having the option of running containers on hosts outside of EC2 is important. It's worth noting this is just a dirty great workaround and will likely be out of date by the time this is commited.
 
 
