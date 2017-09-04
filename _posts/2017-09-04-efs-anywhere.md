@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Docker Rexray/efs plugin outside of EC2 
+title: Using rexray/efs plugin outside of EC2 
 ---
 
 > “What's EFS?" "It's a limitless hard drive in the sky"
@@ -13,7 +13,11 @@ title: Docker Rexray/efs plugin outside of EC2
 # Disclaimer 
 
 This is my first blog post in a while so it may be a little rusty.  
-ShipItCon has been and gone, now it's time for DockerCon.  
+
+> “ShipItCon has been and gone, now it's time for DockerCon."
+
+― Me
+
 
 # Docker Plugins 101 
 
