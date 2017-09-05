@@ -91,20 +91,43 @@ Rexray is trying to query the metadata service which is provided by EC2.  I'm no
 
 # Fake it til you break it
 
-Why does Rexray need to query the metadata service?  Is something being returned that is required to make rexray/efs work?  Doesn't look like it.  Using a fake metadata service, running in a container we can get past this.
+Why does Rexray need to query the metadata service?  Is something being returned that is required to make rexray/efs work?  Doesn't look like it.  Using a fake metadata service, running in a container we can get past this. The following was performed on CentOS.
+
+## Step 1 : Clone the fake ec2 metadata repo
 
 ```
 git clone https://github.com/bpholt/fake-ec2-metadata-service
+```
+
+## Step 2 : Setup a loopback device and bind to 169.254.169.254 :
+```
 ifconfig lo:0 169.254.169.254 netmask 255.255.255.255 up
+```
+
+## Step 3 :
 
 We need to edit ec2-metadata-service.rb and mock out a few endpoints to keep the rexray/efs plugin happy.
 
-The edited file can be found [here](ec2-metadata-service.rb)
+The edited file can be found [here](../files/ec2-metadata-service.rb)
 
-When you have ensured that the instanceID endpoint is correct then you can go ahead and build the image locally.
+The spec file also needs to be replaced. The spec file can be found [here](../files/ec2-metadata-service_spec.rb) and should be dropped into the fake-ec2-metadata-service/spec directory.
+
+## Step 4 : Build the fake-ec2-metadata-service image
+
+```
 docker build -t fake-ec2-metadata-service .
-Edit the docker-compose.yml and replace the image name and change port 8169 to 80
-Run : docker-compose up -d
+```
+
+## Step 5 : Update docker-compose.yml
+
+Edit the docker-compose.yml and replace the "image" name to "fake-ec2-metadata-service:latest"
+Change port 8169 to 80.
+
+The edited file can be found [here](../files/docker-compose.yml)
+
+## Step 6 : Start the service
+```
+docker-compose up -d
 
 ```
 
@@ -118,9 +141,8 @@ docker plugin install rexray/efs EFS_ACCESSKEY=AKA EFS_SECRETKEY=bK EFS_SECURITY
 ```
 
 The plugin will query the fake metadata service and check that the instanceID exists.  I just used a preexisting t2.micro instanceID to get around this.
-The plugin was installed successfully.
 
-Test that it works.  
+The plugin was installed successfully and you should be able to create a volume.  Let's try it out.
 
 ## Create a volume
 
@@ -128,14 +150,15 @@ Test that it works.
 docker volume create --driver rexray/efs --name test-vol-1
 ```
 
+It may take a few seconds for the volume to be created in EFS.  Recommend logging into the AWS Console and checking the status.
+
 ## Start a container and mount the volume
 ```
-docker run -v test-vol-1:/data busybox mount | grep "/data"
+docker run -d --name test --mount type=volume,volume-driver=rexray/efs,src=test-vol-1,target=/app nginx:latest
 ```
-
 
 # Summary
 
-Plugins are awesome. Give them a try.  I really like EFS but I like optionality.  Having the option of running containers on hosts outside of EC2 is important. It's worth noting this is just a dirty great workaround and will likely be out of date by the time this is commited.
+Plugins are awesome, give them a try.  I really like EFS but I like optionality.  Having the option of running containers on hosts outside of EC2 is important. It's worth noting this is just a dirty great workaround and will likely be out of date by the time this is commited.
 
 

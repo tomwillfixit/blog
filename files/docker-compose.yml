@@ -1,0 +1,10 @@
+fake-ec2-metadata-service:
+ #image: bpholt/fake-ec2-metadata-service:latest
+ image: fake-ec2-metadata-service:latest
+ volumes:
+   - $HOME/.aws:/opt/aws
+ ports:
+   - 80:80
+ environment:
+   - BIND_ADDR=0.0.0.0
+   - LOCAL_ADDR
