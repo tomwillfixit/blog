@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Docker Rexray/efs plugin outside of EC2 
+title: Using rexray/efs plugin outside of EC2 
 ---
 
 > “What's EFS?" "It's a limitless hard drive in the sky"
@@ -13,7 +13,11 @@ title: Docker Rexray/efs plugin outside of EC2
 # Disclaimer 
 
 This is my first blog post in a while so it may be a little rusty.  
-ShipItCon has been and gone, now it's time for DockerCon.  
+
+> “ShipItCon has been and gone, now it's time for DockerCon."
+
+― Me
+
 
 # Docker Plugins 101 
 
@@ -104,7 +108,7 @@ git clone https://github.com/bpholt/fake-ec2-metadata-service
 ifconfig lo:0 169.254.169.254 netmask 255.255.255.255 up
 ```
 
-## Step 3 :
+## Step 3 
 
 We need to edit ec2-metadata-service.rb and mock out a few endpoints to keep the rexray/efs plugin happy.
 
@@ -128,19 +132,20 @@ The edited file can be found [here](../files/docker-compose.yml)
 ## Step 6 : Start the service
 ```
 docker-compose up -d
-
 ```
+
+# Test it works
 
 At this point you have a fake metadata service running.
 
-You should be able to install the plugin now : 
+You should be able to install the plugin now
 
 ```
 docker plugin install rexray/efs EFS_ACCESSKEY=AKA EFS_SECRETKEY=bK EFS_SECURITYGROUPS="sg-0 sg-6" EFS_REGION="us-west-2" REXRAY_LOGLEVEL=debug
 
 ```
 
-The plugin will query the fake metadata service and check that the instanceID exists.  I just used a preexisting t2.micro instanceID to get around this.
+The plugin will query the fake metadata service and check that the instanceID exists.  I just used a pre-existing t2.micro instanceID to get around this.
 
 The plugin was installed successfully and you should be able to create a volume.  Let's try it out.
 
