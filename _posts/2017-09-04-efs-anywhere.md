@@ -33,7 +33,13 @@ Check them out here : https://store.docker.com/
 When running Docker in EC2 instances the rexray/efs plugin works like a charm. It does what it says on the tin. Persistent storage is made available to your containers.  
 For more info on EFS check out : https://aws.amazon.com/efs/
 
-When running a Docker host outside of EC2 things aren't quite so smooth.  According to a github issue back in Febuary 2017 the plugin only works from an EC2 instance. ( Add link later).  This may have changed since but installing the plugin on Docker 17.06.1 on an instance outside AWS failed with this error :
+When running a Docker host outside of EC2 things aren't quite so smooth.  According to a github issue back in Febuary 2017 the plugin only works from an [EC2 instance](https://github.com/codedellemc/rexray/issues/722). 
+
+> "So a dumb question, but are you running this on an Amazon EC2 instance? Because the EFS and EBS drivers are only supported on EC2 instances. Likewise, the VirtualBox driver is only supported on a VBox VM."
+
+― https://github.com/codedellemc/rexray/issues/722
+
+This may have changed since but installing the plugin on Docker 17.06.1 on an instance outside AWS failed with this error :
 
 ```
 docker plugin install rexray/efs EFS_ACCESSKEY=AKA EFS_SECRETKEY=bK EFS_SECURITYGROUPS="sg-0 sg-6" EFS_REGION="us-west-2" REXRAY_LOGLEVEL=debug
@@ -108,7 +114,7 @@ git clone https://github.com/bpholt/fake-ec2-metadata-service
 ifconfig lo:0 169.254.169.254 netmask 255.255.255.255 up
 ```
 
-## Step 3 
+## Step 3 : Update metadata endpoints
 
 We need to edit ec2-metadata-service.rb and mock out a few endpoints to keep the rexray/efs plugin happy.
 
@@ -138,7 +144,7 @@ docker-compose up -d
 
 At this point you have a fake metadata service running.
 
-You should be able to install the plugin now
+## Step 1 : Install plugin
 
 ```
 docker plugin install rexray/efs EFS_ACCESSKEY=AKA EFS_SECRETKEY=bK EFS_SECURITYGROUPS="sg-0 sg-6" EFS_REGION="us-west-2" REXRAY_LOGLEVEL=debug
@@ -149,7 +155,7 @@ The plugin will query the fake metadata service and check that the instanceID ex
 
 The plugin was installed successfully and you should be able to create a volume.  Let's try it out.
 
-## Create a volume
+## Step 2 : Create a volume
 
 ```
 docker volume create --driver rexray/efs --name test-vol-1
@@ -157,7 +163,7 @@ docker volume create --driver rexray/efs --name test-vol-1
 
 It may take a few seconds for the volume to be created in EFS.  Recommend logging into the AWS Console and checking the status.
 
-## Start a container and mount the volume
+## Step 3 : Start a container and mount the volume
 ```
 docker run -d --name test --mount type=volume,volume-driver=rexray/efs,src=test-vol-1,target=/app nginx:latest
 ```
